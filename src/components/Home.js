@@ -11,6 +11,7 @@ function Home(props) {
     // First, verify if the user is logged in
     axios.get('https://simple-backend-3-i484.onrender.com/home', { withCredentials: true })
       .then(res => {
+        console.log(res.data);
         if (res.data === "token is not available" || res.data === "wrong token") {
           navigate('/login');  // redirect to login if not authenticated
         } else {
