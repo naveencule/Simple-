@@ -18,7 +18,7 @@ const Login = () => {
       .then(result => {
         console.log(result.data);
         if (result.data.Status === 'login success') {
-          navigate('https://simple-backend-3-i484.onrender.com/home');
+          navigate('/home');
         } else {
           alert(result.data.msg || 'Login failed');
         }
