@@ -23,8 +23,8 @@ function Navbar(props) {
                 <h2>Simply post</h2>
             </div>
             <div className="links">
-              <a href="">  <Link to="https://simple-backend-3-i484.onrender.com/home">Home</Link></a>
-                <a href=""><Link to="https://simple-backend-3-i484.onrender.com/addpost">Add Post</Link></a>
+              <a href="">  <Link to="/home">Home</Link></a>
+                <a href=""><Link to="/addpost">Add Post</Link></a>
                 <a href=""><Link to="/" onClick={handlelogout}>Logout</Link></a>
 
             </div>
