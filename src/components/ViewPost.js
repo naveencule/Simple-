@@ -8,13 +8,13 @@ function ViewPost(props) {
     const [post,setPost]=useState({})
     const navigate = useNavigate()
     useEffect(()=>{
-        axios.get('http://localhost:3001/viewpost/'+id)
+        axios.get('https://simple-backend-3-i484.onrender.com/viewpost/'+id)
         .then(result => setPost(result.data))
         .catch(err => console.log(err))
     })
 
     const handledelete =(id)=>{
-        axios.delete('http://localhost:3001/deletepost/'+id)
+        axios.delete('https://simple-backend-3-i484.onrender.com/deletepost/'+id)
         .then(result => { console.log(result)
             // alert('post deleted')
             navigate('/home')})
@@ -26,7 +26,7 @@ function ViewPost(props) {
           
                 <div className="view-post-display">
                     
-                    <img src={`http://localhost:3001/Images/${post.file}`} alt="" srcset="" />
+                    <img src={`https://simple-backend-3-i484.onrender.com/Images/${post.file}`} alt="" srcset="" />
                     <div className="editdelebtn">
                         <Link id="editbutton" to={`/editpost/${post._id}`}>edit</Link>
                         <button id="deletebutton" onClick={(e)=>handledelete(post._id)}>delete</button>

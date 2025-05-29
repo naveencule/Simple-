@@ -13,7 +13,7 @@ function Addpost() {
 
   useEffect(() => {
     // Check if the user is logged in using verifyuser
-    axios.get('http://localhost:3001/home', { withCredentials: true })
+    axios.get('https://simple-backend-3-i484.onrender.com/home', { withCredentials: true })
       .then(res => {
         if (res.data.email) {
           setIsAuthenticated(true);  // User is logged in
@@ -43,7 +43,7 @@ function Addpost() {
     formData.append('description', description);
     formData.append('file', file);
 
-    axios.post('http://localhost:3001/addpost', formData, {
+    axios.post('https://simple-backend-3-i484.onrender.com/addpost', formData, {
       withCredentials: true
     })
       .then(result => {

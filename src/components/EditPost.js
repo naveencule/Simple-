@@ -13,7 +13,7 @@ function EditPost(props) {
     const handleSubmit =(e)=>{
         e.preventDefault()
     
-        axios.put('http://localhost:3001/editpost/'+id, {title, description})
+        axios.put('https://simple-backend-3-i484.onrender.com/editpost/'+id, {title, description})
         .then(result =>{ console.log(result)
                 alert('post updated')
                 navigate('/home')})
@@ -21,7 +21,7 @@ function EditPost(props) {
 
     }
     useEffect(()=>{
-        axios.get('http://localhost:3001/viewpost/'+id)
+        axios.get('https://simple-backend-3-i484.onrender.com/viewpost/'+id)
         .then(result =>{ setTitle(result.data.title)
             setDescription(result.data.description)})
         .catch(err => console.log(err))

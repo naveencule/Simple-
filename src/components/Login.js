@@ -14,7 +14,7 @@ const Login = () => {
   const logsubmit = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:3001/login', { email, password })
+    axios.post('https://simple-backend-3-i484.onrender.com/login', { email, password })
       .then(result => {
         console.log(result.data);
 
