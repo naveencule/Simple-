@@ -3,7 +3,7 @@ import './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-// Set this globally once, outside the component or in your main app entry point
+// ✅ Important: Allow cookies in Axios
 axios.defaults.withCredentials = true;
 
 const Login = () => {
@@ -17,9 +17,7 @@ const Login = () => {
     axios.post('https://simple-backend-3-i484.onrender.com/login', { email, password })
       .then(result => {
         console.log(result.data);
-
         if (result.data.Status === 'login success') {
-          // Navigate after login success
           navigate('/home');
         } else {
           alert(result.data.msg || 'Login failed');
@@ -54,7 +52,6 @@ const Login = () => {
               required
             />
           </div>
-          {/* Use a button of type submit, not Link */}
           <button id='log-btn' type='submit'>Login</button>
         </form>
         <p>
