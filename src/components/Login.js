@@ -16,7 +16,7 @@ const Login = () => {
 
     axios.post('https://simple-backend-3-i484.onrender.com/login', { email, password })
       .then(result => {
-        console.log(result.data);
+        console.log(result.data+"result data");
         if (result.data.Status === 'login success') {
           navigate('/home');
         } else {
