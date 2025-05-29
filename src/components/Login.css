@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.container{
+width: 350px;
+height: 450px;
+background-color: rgb(82, 82, 182);
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+text-align: center;
+} 
+.Head{
+    margin: 45px;
+font-size: 22px;
+color: rgb(255, 255, 255);
+} 
+.input-sec input{
+    border-radius: 2px;
+    border: 1px solid rgb(107, 99, 99);
+    padding: 14px;
+    box-sizing: border-box;
+    color: black;
+    margin-bottom: 10px;
+    margin-right: 5px;
+
+}   
+.input-sec{
+    margin-bottom: 10px;
+}  
+#log-btn{
+width: 68px;
+height: 33px;
+font-size: 18px;
+font-weight: bold;
+background-color: rgb(3, 178, 247);
+color: rgb(255, 255, 255);
+border: 1px solid rgb(107, 99, 99);
+margin-bottom: 10px;
+text-decoration: none;
+} 
+#sign-btn{
+    width: 65px;
+    height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(29, 187, 79);
+    color: rgb(255, 246, 246);
+    border: 1px solid rgb(107, 99, 99);
+    margin-bottom: 10px;
+    text-decoration: none;
+    } 
